@@ -1,19 +1,24 @@
 package Model;
 
-abstract class Staff extends User {
+abstract public class Staff extends User {
 
-    private int NIK;
+    private String NIK;
 
-    public Staff(String nama, String alamat, String tTL, int telp, int nIK) {
+    public Staff(String nama, String alamat, String tTL, String telp, String nIK) {
         super(nama, alamat, tTL, telp);
         NIK = nIK;
     }
 
-    public int getNIK() {
+    public String getNIK() {
         return NIK;
     }
 
-    public void setNIK(int nIK) {
+    public void setNIK(String nIK) {
         NIK = nIK;
+    }
+
+    public String toString() {
+        return super.toString() + "\n" +
+                "NIK: " + NIK;
     }
 }

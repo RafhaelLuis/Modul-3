@@ -1,6 +1,6 @@
 package Model;
 
-abstract class Presensi {
+public class Presensi {
 
     private int tanggal;
     private int status;

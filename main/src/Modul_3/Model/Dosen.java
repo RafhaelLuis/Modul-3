@@ -2,12 +2,12 @@ package Model;
 
 import java.util.List;
 
-abstract class Dosen extends Staff {
+abstract public class Dosen extends Staff {
 
     private int departemen;
     private List<ListMKdiajar> matkulDiajar;
 
-    public Dosen(String nama, String alamat, String tTL, int telp, int nIK, int departemen,
+    public Dosen(String nama, String alamat, String tTL, String telp, String nIK, int departemen,
             List<ListMKdiajar> matkulDiajar) {
         super(nama, alamat, tTL, telp, nIK);
         this.departemen = departemen;

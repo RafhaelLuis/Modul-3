@@ -1,5 +1,5 @@
 package Model;
 
-enum Status {
+public enum Status {
     HADIR, ALPHA;
 }

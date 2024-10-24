@@ -1,6 +1,6 @@
 package Model;
 
-abstract class ListMataKuliah {
+public class ListMataKuliah {
     private int kodeMK;
     private int sks;
     private String namaMK;
@@ -33,5 +33,12 @@ abstract class ListMataKuliah {
 
     public void setNamaMK(String namaMK) {
         this.namaMK = namaMK;
+    }
+
+    @Override
+    public String toString() {
+        return "Kode MK: " + kodeMK +
+                ", SKS: " + sks +
+                ", Nama MK: " + namaMK;
     }
 }

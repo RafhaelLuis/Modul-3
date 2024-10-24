@@ -2,7 +2,7 @@ package Model;
 
 import java.util.List;
 
-class ListMKdiambil extends ListMataKuliah {
+public class ListMKdiambil extends ListMataKuliah {
 
     private ListMataKuliah listMK;
     private List<Presensi> presensi;

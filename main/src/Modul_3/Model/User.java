@@ -5,9 +5,9 @@ abstract class User {
     private String nama;
     private String alamat;
     private String TTL;
-    private int telp;
+    private String telp;
 
-    public User(String nama, String alamat, String tTL, int telp) {
+    public User(String nama, String alamat, String tTL, String telp) {
         this.nama = nama;
         this.alamat = alamat;
         this.TTL = tTL;
@@ -38,12 +38,20 @@ abstract class User {
         TTL = tTL;
     }
 
-    public int getTelp() {
+    public String getTelp() {
         return telp;
     }
 
-    public void setTelp(int telp) {
+    public void setTelp(String telp) {
         this.telp = telp;
+    }
+
+    @Override
+    public String toString() {
+        return "Nama: " + nama + "\n" +
+                "Alamat: " + alamat + "\n" +
+                "TTL: " + TTL + "\n" +
+                "Telp: " + telp;
     }
 
 }

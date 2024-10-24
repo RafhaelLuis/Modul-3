@@ -2,12 +2,12 @@ package Model;
 
 import java.util.List;
 
-class MhsMagister extends Mahasiswa {
+public class MhsMagister extends Mahasiswa {
 
     private List<ListMKdiambil> matkulDiambil;
     private String judulPenelitianTesis;
 
-    public MhsMagister(String nama, String alamat, String tTL, int telp, int nIM, String jurusan,
+    public MhsMagister(String nama, String alamat, String tTL, String telp, String nIM, String jurusan,
             List<ListMKdiambil> matkulDiambil, String judulPenelitianTesis) {
         super(nama, alamat, tTL, telp, nIM, jurusan);
         this.matkulDiambil = matkulDiambil;

@@ -1,13 +1,13 @@
 package Model;
 
-class MhsDoktor extends Mahasiswa {
+public class MhsDoktor extends Mahasiswa {
 
     private String judulPenelitianDisertasi;
     private int nilaiSidang1;
     private int nilaiSidang2;
     private int nilaiSidang3;
 
-    public MhsDoktor(String nama, String alamat, String tTL, int telp, int nIM, String jurusan,
+    public MhsDoktor(String nama, String alamat, String tTL, String telp, String nIM, String jurusan,
             String judulPenelitianDisertasi, int nilaiSidang1, int nilaiSidang2, int nilaiSidang3) {
         super(nama, alamat, tTL, telp, nIM, jurusan);
         this.judulPenelitianDisertasi = judulPenelitianDisertasi;

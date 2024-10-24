@@ -2,12 +2,12 @@ package Model;
 
 import java.util.List;
 
-class Karyawan extends Staff {
+public class Karyawan extends Staff {
 
     private double salary;
     private List<PresensiStaff> PresensiStaff;
 
-    public Karyawan(String nama, String alamat, String tTL, int telp, int nIK, double salary,
+    public Karyawan(String nama, String alamat, String tTL, String telp, String nIK, double salary,
             List<PresensiStaff> presensiStaff) {
         super(nama, alamat, tTL, telp, nIK);
         this.salary = salary;

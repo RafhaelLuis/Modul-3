@@ -1,6 +1,6 @@
 package Model;
 
-class ListMataKuliahPilihan extends ListMataKuliah {
+public class ListMataKuliahPilihan extends ListMataKuliah {
 
     private int minMhs;
 
@@ -15,6 +15,12 @@ class ListMataKuliahPilihan extends ListMataKuliah {
 
     public void setMinMhs(int minMhs) {
         this.minMhs = minMhs;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() +
+                ", Minimum Mahasiswa: " + minMhs;
     }
 
 }

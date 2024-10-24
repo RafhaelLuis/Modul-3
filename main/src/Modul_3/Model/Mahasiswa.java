@@ -1,21 +1,21 @@
 package Model;
 
-abstract class Mahasiswa extends User {
+abstract public class Mahasiswa extends User {
 
-    private int NIM;
+    private String NIM;
     private String jurusan;
 
-    public Mahasiswa(String nama, String alamat, String tTL, int telp, int nIM, String jurusan) {
+    public Mahasiswa(String nama, String alamat, String tTL, String telp, String nIM, String jurusan) {
         super(nama, alamat, tTL, telp);
         this.NIM = nIM;
         this.jurusan = jurusan;
     }
 
-    public int getNIM() {
+    public String getNIM() {
         return NIM;
     }
 
-    public void setNIM(int nIM) {
+    public void setNIM(String nIM) {
         NIM = nIM;
     }
 

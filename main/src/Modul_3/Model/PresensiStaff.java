@@ -1,12 +1,31 @@
 package Model;
 
-class PresensiStaff extends Presensi {
+public class PresensiStaff {
 
+    private int tanggal;
+    private int status;
     private int jam;
 
     public PresensiStaff(int tanggal, int status, int jam) {
-        super(tanggal, status);
+        this.tanggal = tanggal;
+        this.status = status;
         this.jam = jam;
+    }
+
+    public int getTanggal() {
+        return tanggal;
+    }
+
+    public void setTanggal(int tanggal) {
+        this.tanggal = tanggal;
+    }
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
     }
 
     public int getJam() {
