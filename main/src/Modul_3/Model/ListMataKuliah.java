@@ -37,8 +37,6 @@ public class ListMataKuliah {
 
     @Override
     public String toString() {
-        return "Kode MK: " + kodeMK +
-                ", SKS: " + sks +
-                ", Nama MK: " + namaMK;
+        return "ListMataKuliah [kodeMK=" + kodeMK + ", sks=" + sks + ", namaMK=" + namaMK + "]";
     }
 }

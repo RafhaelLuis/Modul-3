@@ -47,4 +47,11 @@ public class MhsDoktor extends Mahasiswa {
     public void setNilaiSidang3(int nilaiSidang3) {
         this.nilaiSidang3 = nilaiSidang3;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + "MhsDoktor [judulPenelitianDisertasi=" + judulPenelitianDisertasi + ", nilaiSidang1="
+                + nilaiSidang1
+                + ", nilaiSidang2=" + nilaiSidang2 + ", nilaiSidang3=" + nilaiSidang3 + "]";
+    }
 }

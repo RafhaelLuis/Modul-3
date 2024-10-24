@@ -17,8 +17,9 @@ abstract public class Staff extends User {
         NIK = nIK;
     }
 
+    @Override
     public String toString() {
-        return super.toString() + "\n" +
-                "NIK: " + NIK;
+        return "Staff [NIK=" + NIK + "]";
     }
+
 }

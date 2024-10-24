@@ -27,4 +27,9 @@ abstract public class Mahasiswa extends User {
         this.jurusan = jurusan;
     }
 
+    @Override
+    public String toString() {
+        return super.toString() + "Mahasiswa [NIM=" + NIM + ", jurusan=" + jurusan + "]";
+    }
+
 }

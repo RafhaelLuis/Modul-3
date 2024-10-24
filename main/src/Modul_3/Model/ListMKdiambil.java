@@ -60,4 +60,11 @@ public class ListMKdiambil extends ListMataKuliah {
         this.n3 = n3;
     }
 
+    @Override
+    public String toString() {
+        return super.toString() + "ListMKdiambil [listMK=" + listMK + ", presensi=" + presensi + ", n1=" + n1 + ", n2="
+                + n2 + ", n3=" + n3
+                + "]";
+    }
+
 }

@@ -30,4 +30,10 @@ public class MhsMagister extends Mahasiswa {
         this.judulPenelitianTesis = judulPenelitianTesis;
     }
 
+    @Override
+    public String toString() {
+        return super.toString() + "MhsMagister [matkulDiambil=" + matkulDiambil + ", judulPenelitianTesis="
+                + judulPenelitianTesis + "]";
+    }
+
 }

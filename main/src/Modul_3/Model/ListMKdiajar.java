@@ -29,4 +29,9 @@ public class ListMKdiajar extends ListMataKuliah {
         this.presensiStaff = presensiStaff;
     }
 
+    @Override
+    public String toString() {
+        return super.toString() + "ListMKdiajar [listMK=" + listMK + ", presensiStaff=" + presensiStaff + "]";
+    }
+
 }

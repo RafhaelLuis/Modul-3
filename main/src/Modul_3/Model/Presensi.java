@@ -26,4 +26,9 @@ public class Presensi {
         this.status = status;
     }
 
+    @Override
+    public String toString() {
+        return "Presensi [tanggal=" + tanggal + ", status=" + status + "]";
+    }
+
 }

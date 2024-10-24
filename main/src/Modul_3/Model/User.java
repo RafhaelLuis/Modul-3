@@ -48,10 +48,7 @@ abstract class User {
 
     @Override
     public String toString() {
-        return "Nama: " + nama + "\n" +
-                "Alamat: " + alamat + "\n" +
-                "TTL: " + TTL + "\n" +
-                "Telp: " + telp;
+        return "User [nama=" + nama + ", alamat=" + alamat + ", TTL=" + TTL + ", telp=" + telp + "]";
     }
 
 }

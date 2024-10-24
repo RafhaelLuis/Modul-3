@@ -29,4 +29,10 @@ public class Karyawan extends Staff {
     public void setPresensiStaff(List<PresensiStaff> presensiStaff) {
         PresensiStaff = presensiStaff;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + "Karyawan [salary=" + salary + ", PresensiStaff=" + PresensiStaff + "]";
+    }
+
 }

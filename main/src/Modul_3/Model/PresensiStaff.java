@@ -36,4 +36,9 @@ public class PresensiStaff {
         this.jam = jam;
     }
 
+    @Override
+    public String toString() {
+        return "PresensiStaff [tanggal=" + tanggal + ", status=" + status + ", jam=" + jam + "]";
+    }
+
 }

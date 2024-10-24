@@ -20,4 +20,9 @@ public class MhsSarjana extends Mahasiswa {
         this.matkulDiambil = matkulDiambil;
     }
 
+    @Override
+    public String toString() {
+        return super.toString() + "MhsSarjana [matkulDiambil=" + matkulDiambil + "]";
+    }
+
 }
