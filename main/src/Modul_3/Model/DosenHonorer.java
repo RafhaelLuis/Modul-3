@@ -7,8 +7,8 @@ public class DosenHonorer extends Dosen {
     private double honorPerSKS;
 
     public DosenHonorer(String nama, String alamat, String tTL, String telp, String nIK, int departemen,
-            List<ListMKdiajar> matkulDiajar, double honorPerSKS) {
-        super(nama, alamat, tTL, telp, nIK, departemen, matkulDiajar);
+            List<ListMKdiajar> matkulDiajar, List<Model.PresensiStaff> presensiStaff, double honorPerSKS) {
+        super(nama, alamat, tTL, telp, nIK, departemen, matkulDiajar, presensiStaff);
         this.honorPerSKS = honorPerSKS;
     }
 

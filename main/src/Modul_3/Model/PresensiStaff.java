@@ -3,14 +3,8 @@ package Model;
 public class PresensiStaff {
 
     private int tanggal;
-    private int status;
+    private Status status;
     private int jam;
-
-    public PresensiStaff(int tanggal, int status, int jam) {
-        this.tanggal = tanggal;
-        this.status = status;
-        this.jam = jam;
-    }
 
     public int getTanggal() {
         return tanggal;
@@ -20,11 +14,11 @@ public class PresensiStaff {
         this.tanggal = tanggal;
     }
 
-    public int getStatus() {
+    public Status getStatus() {
         return status;
     }
 
-    public void setStatus(int status) {
+    public void setStatus(Status status) {
         this.status = status;
     }
 
@@ -33,6 +27,12 @@ public class PresensiStaff {
     }
 
     public void setJam(int jam) {
+        this.jam = jam;
+    }
+
+    public PresensiStaff(int tanggal, Status status, int jam) {
+        this.tanggal = tanggal;
+        this.status = status;
         this.jam = jam;
     }
 

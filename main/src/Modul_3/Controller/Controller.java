@@ -211,12 +211,70 @@ public class Controller {
                     for (ListMKdiambil matkulDiambil : mahasiswaSarjana.getMatkulDiambil()) {
                         MK += matkulDiambil.getNamaMK() + " dan total presensinya " + matkulDiambil.getPresensi().size()
                                 + "\n";
+                        return MK;
+                    }
+                } else if (mahasiswa instanceof MhsMagister) {
+                    MhsMagister mahasiswaMagister = (MhsMagister) mahasiswa;
+
+                    for (ListMKdiambil matkulDiambil : mahasiswaMagister.getMatkulDiambil()) {
+                        MK += matkulDiambil.getNamaMK() + " dan total presensinya " + matkulDiambil.getPresensi().size()
+                                + "\n";
+                        return MK;
                     }
                 }
             }
         }
 
-        return MK;
+        return "Mahasiswa tidak ditemukan";
+
+    }
+
+    public String printJamDosen(String NIK) {
+
+        int jamAjar = 0;
+
+        for (User user : users) {
+
+            if (user instanceof Staff) {
+                Staff staff = (Staff) user;
+
+                if (staff instanceof Dosen) {
+                    Dosen dosen = (Dosen) staff;
+
+                    if (dosen instanceof DosenTetap) {
+                        DosenTetap dosenTetap = (DosenTetap) dosen;
+
+                        for (ListMKdiajar matkulDiajar : dosenTetap.getMatkulDiajar()) {
+                            for (PresensiStaff presensiStaff : dosenTetap.getPresensiStaff()) {
+                                if (presensiStaff.getStatus() == Status.HADIR) {
+                                    jamAjar += matkulDiajar.getSks();
+                                }
+                            }
+                        }
+                        return "Total jam yang diajar" + jamAjar;
+
+                    } else if (dosen instanceof DosenHonorer) {
+                        DosenHonorer DosenHonorer = (DosenHonorer) dosen;
+
+                        for (ListMKdiajar matkulDiajar : DosenHonorer.getMatkulDiajar()) {
+                            for (PresensiStaff presensiStaff : DosenHonorer.getPresensiStaff()) {
+                                if (presensiStaff.getStatus() == Status.HADIR) {
+                                    jamAjar += matkulDiajar.getSks();
+                                }
+                            }
+                        }
+                        return "Total jam yang diajar" + jamAjar;
+                    }
+                }
+            }
+        }
+
+        return "Dosen tidak ditemukan";
+
+    }
+
+    public String printGajiStaff(String NIK) {
+
     }
 
 }

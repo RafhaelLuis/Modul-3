@@ -3,12 +3,7 @@ package Model;
 public class Presensi {
 
     private int tanggal;
-    private int status;
-
-    public Presensi(int tanggal, int status) {
-        this.tanggal = tanggal;
-        this.status = status;
-    }
+    private Status status;
 
     public int getTanggal() {
         return tanggal;
@@ -18,11 +13,16 @@ public class Presensi {
         this.tanggal = tanggal;
     }
 
-    public int getStatus() {
+    public Status getStatus() {
         return status;
     }
 
-    public void setStatus(int status) {
+    public void setStatus(Status status) {
+        this.status = status;
+    }
+
+    public Presensi(int tanggal, Status status) {
+        this.tanggal = tanggal;
         this.status = status;
     }
 

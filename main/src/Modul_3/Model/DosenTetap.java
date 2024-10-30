@@ -7,8 +7,8 @@ public class DosenTetap extends Dosen {
     private double salary;
 
     public DosenTetap(String nama, String alamat, String tTL, String telp, String nIK, int departemen,
-            List<ListMKdiajar> matkulDiajar, double salary) {
-        super(nama, alamat, tTL, telp, nIK, departemen, matkulDiajar);
+            List<ListMKdiajar> matkulDiajar, List<Model.PresensiStaff> presensiStaff, double salary) {
+        super(nama, alamat, tTL, telp, nIK, departemen, matkulDiajar, presensiStaff);
         this.salary = salary;
     }
 
