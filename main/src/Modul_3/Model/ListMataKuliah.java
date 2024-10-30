@@ -11,6 +11,9 @@ public class ListMataKuliah {
         this.namaMK = namaMK;
     }
 
+    public ListMataKuliah() {
+    }
+
     public int getKodeMK() {
         return kodeMK;
     }

@@ -1,6 +1,6 @@
 package Model;
 
-abstract class User {
+abstract public class User {
 
     private String nama;
     private String alamat;
@@ -12,6 +12,9 @@ abstract class User {
         this.alamat = alamat;
         this.TTL = tTL;
         this.telp = telp;
+    }
+
+    public User() {
     }
 
     public String getNama() {
