@@ -22,7 +22,7 @@ public class Controller {
                         + "\nStatus : " + user.getClass().getSimpleName()
                         + "\nAlamat : " + user.getAlamat()
                         + "\nTempat, Tanggal lahir : " + user.getTTL()
-                        + "\nTempat, Tanggal lahir : " + user.getTelp();
+                        + "\nTelp : " + user.getTelp();
             }
         }
         return "Data Tidak ditemukan";
@@ -274,18 +274,44 @@ public class Controller {
     }
 
     public String printGajiStaff(String NIK) {
-        
+
         double gajiStaff = 0;
+        int unit = 0;
 
         for (User user : users) {
             if (user instanceof Staff) {
                 Staff staff = (Staff) user;
 
-                if (staff instanceof ) {
-                    
+                if (staff instanceof Karyawan) {
+                    Karyawan karyawan = (Karyawan) staff;
+
+                    if (karyawan.getNIK().equals(NIK)) {
+                        unit = karyawan.getUnit();
+                        gajiStaff = unit / 22 * karyawan.getSalary();
+                        return "Gaji Karyawan : " + gajiStaff;
+                    }
+                }
+
+                if (staff instanceof Dosen) {
+                    Dosen dosen = (Dosen) staff;
+
+                    if (dosen instanceof DosenTetap) {
+                        DosenTetap dosenTetap = (DosenTetap) dosen;
+                        unit = dosenTetap.getUnit();
+                        gajiStaff = dosenTetap.getSalary() + (unit * 25000);
+                        return "Gaji Dosen Tetap : " + gajiStaff;
+
+                    } else if (dosen instanceof DosenHonorer) {
+                        DosenHonorer dosenHonorer = (DosenHonorer) dosen;
+                        unit = dosenHonorer.getUnit();
+                        gajiStaff = unit * dosenHonorer.getHonorPerSKS();
+                        return "Gaji Dosen Honorer : " + gajiStaff;
+                    }
                 }
             }
         }
+
+        return "Karyawan tidak ditemukan";
 
     }
 

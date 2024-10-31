@@ -40,4 +40,17 @@ abstract public class Dosen extends Staff {
         PresensiStaff = presensiStaff;
     }
 
+    public int getUnit() {
+        int unit = 0;
+
+        for (PresensiStaff absen : PresensiStaff) {
+            if (absen.getStatus().equals(Status.HADIR)) {
+                unit++;
+            }
+        }
+
+        return unit;
+
+    }
+
 }

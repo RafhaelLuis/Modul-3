@@ -26,6 +26,10 @@ public class Presensi {
         this.status = status;
     }
 
+    public Status isHadir() {
+        return this.status = Status.HADIR;
+    }
+
     @Override
     public String toString() {
         return "Presensi [tanggal=" + tanggal + ", status=" + status + "]";

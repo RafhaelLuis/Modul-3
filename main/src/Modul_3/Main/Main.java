@@ -11,8 +11,8 @@ public class Main {
                 System.out.println("\033c");
 
                 ArrayList<Presensi> listPresensi1 = new ArrayList<>();
-                Presensi presensi1 = new Presensi(2, 1); // Hadir
-                Presensi presensi2 = new Presensi(31, 0); // Tidak Hadir
+                Presensi presensi1 = new Presensi(2, Status.HADIR);
+                Presensi presensi2 = new Presensi(31, Status.ALPHA);
                 listPresensi1.add(presensi1);
                 listPresensi1.add(presensi2);
 
@@ -60,8 +60,8 @@ public class Main {
                 mahasiswaDoktor.add(mahasiswaDoktor1);
 
                 ArrayList<PresensiStaff> presensiStaffs = new ArrayList<>();
-                PresensiStaff pSTaff1 = new PresensiStaff(12, 1, 8);
-                PresensiStaff pSTaff2 = new PresensiStaff(26, 0, 9);
+                PresensiStaff pSTaff1 = new PresensiStaff(12, Status.HADIR, 8);
+                PresensiStaff pSTaff2 = new PresensiStaff(26, Status.ALPHA, 9);
 
                 presensiStaffs.add(pSTaff1);
                 presensiStaffs.add(pSTaff2);
@@ -89,9 +89,9 @@ public class Main {
                 // Dummy Dosen
                 ArrayList<Dosen> dosens = new ArrayList<>();
                 Dosen dosenTetap1 = new DosenTetap("Dr. Subaba", "Jl. Gatot ", "Bogor, 07 Januari 2010", "03333333",
-                                "32023678912", 3, matkulDiajars2, 300000);
+                                "32023678912", 3, matkulDiajars2, presensiStaffs, 300000);
                 Dosen dosenHonorer1 = new DosenTetap("Dr. Subaba", "Jl.  Subroto", "Bogor, 07 Januari 2010", "03333333",
-                                "32023678912", 3, matkulDiajars2, 300000);
+                                "32023678912", 3, matkulDiajars2, presensiStaffs, 300000);
                 dosens.add(dosenTetap1);
                 dosens.add(dosenHonorer1);
 

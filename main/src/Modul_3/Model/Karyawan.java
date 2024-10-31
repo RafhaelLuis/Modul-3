@@ -30,6 +30,19 @@ public class Karyawan extends Staff {
         PresensiStaff = presensiStaff;
     }
 
+    public int getUnit() {
+        int unit = 0;
+
+        for (PresensiStaff absen : PresensiStaff) {
+            if (absen.getStatus().equals(Status.HADIR)) {
+                unit++;
+            }
+        }
+
+        return unit;
+
+    }
+
     @Override
     public String toString() {
         return super.toString() + "Karyawan [salary=" + salary + ", PresensiStaff=" + PresensiStaff + "]";
