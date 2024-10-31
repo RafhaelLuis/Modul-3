@@ -274,6 +274,18 @@ public class Controller {
     }
 
     public String printGajiStaff(String NIK) {
+        
+        double gajiStaff = 0;
+
+        for (User user : users) {
+            if (user instanceof Staff) {
+                Staff staff = (Staff) user;
+
+                if (staff instanceof ) {
+                    
+                }
+            }
+        }
 
     }
 
