@@ -10,9 +10,17 @@ public class ListMKdiambil extends ListMataKuliah {
     private int n2;
     private int n3;
 
-    public ListMKdiambil(int kodeMK, int sks, String namaMK, ListMataKuliah listMK, List<Presensi> presensi, int n1,
+    public ListMKdiambil(String kodeMK, int sks, String namaMK, ListMataKuliah listMK, List<Presensi> presensi, int n1,
             int n2, int n3) {
         super(kodeMK, sks, namaMK);
+        this.listMK = listMK;
+        this.presensi = presensi;
+        this.n1 = n1;
+        this.n2 = n2;
+        this.n3 = n3;
+    }
+
+    public ListMKdiambil(ListMataKuliah listMK, List<Presensi> presensi, int n1, int n2, int n3) {
         this.listMK = listMK;
         this.presensi = presensi;
         this.n1 = n1;

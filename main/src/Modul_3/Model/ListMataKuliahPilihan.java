@@ -4,8 +4,12 @@ public class ListMataKuliahPilihan extends ListMataKuliah {
 
     private int minMhs;
 
-    public ListMataKuliahPilihan(int kodeMK, int sks, String namaMK, int minMhs) {
+    public ListMataKuliahPilihan(String kodeMK, int sks, String namaMK, int minMhs) {
         super(kodeMK, sks, namaMK);
+        this.minMhs = minMhs;
+    }
+
+    public ListMataKuliahPilihan(int minMhs) {
         this.minMhs = minMhs;
     }
 

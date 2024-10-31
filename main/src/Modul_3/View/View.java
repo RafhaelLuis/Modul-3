@@ -8,7 +8,7 @@ public class View {
 
     private Controller controller;
 
-    public MainMenu(Controller controller) {
+    public View(Controller controller) {
         this.controller = controller;
     }
 
@@ -17,14 +17,14 @@ public class View {
         boolean running = true;
 
         String menu = "1. Print UserData\n" +
-                      "2. Print Nilai Akhir Mahasiswa\n" +
-                      "3. Print Rata-Rata Nilai Akhir\n" +
-                      "4. Print Jumlah Mahasiswa Tidak Lulus\n" +
-                      "5. Print Mata Kuliah Ambil Mahasiswa\n" +
-                      "6. Print Total Jam Mengajar Dosen\n" +
-                      "7. Print Gaji Staff\n" +
-                      "0. Exit\n" +
-                      "Pilih menu:";
+                "2. Print Nilai Akhir Mahasiswa\n" +
+                "3. Print Rata-Rata Nilai Akhir\n" +
+                "4. Print Jumlah Mahasiswa Tidak Lulus\n" +
+                "5. Print Mata Kuliah Ambil Mahasiswa\n" +
+                "6. Print Total Jam Mengajar Dosen\n" +
+                "7. Print Gaji Staff\n" +
+                "0. Exit\n" +
+                "Pilih menu:";
 
         while (running) {
             String input = getInput(menu);
@@ -61,10 +61,10 @@ public class View {
                     printNilaiAkhir();
                     break;
 
-                case 3:
+                // case 3:
 
-                    printRataRataNilaiAkhir();
-                    break;
+                // printRataRataNilaiAkhir();
+                // break;
 
                 case 4:
 
@@ -101,7 +101,6 @@ public class View {
 
     }
 
-
     private String getInput(String message) {
         return JOptionPane.showInputDialog(message);
     }
@@ -120,7 +119,7 @@ public class View {
 
         if (nama != null) {
 
-            showMessage(controller.printUserData(nama));
+            showMessage(controller.printData(nama));
 
         }
 
@@ -136,7 +135,7 @@ public class View {
 
             if (kodeMK != null) {
 
-                showMessage(controller.printNilaiAkhir(NIM, kodeMK));
+                showMessage(controller.printNA(NIM, kodeMK));
 
             }
 
@@ -144,17 +143,17 @@ public class View {
 
     }
 
-    private void printRataRataNilaiAkhir() {
+    // private void printRataRataNilaiAkhir() {
 
-        String kodeMK = getInput("Masukkan Kode Mata Kuliah:");
+    // String kodeMK = getInput("Masukkan Kode Mata Kuliah:");
 
-        if (kodeMK != null) {
+    // if (kodeMK != null) {
 
-            showMessage(controller.printRataRataNilaiAkhir(kodeMK));
+    // showMessage(controller.printRataRataNilaiAkhir(kodeMK));
 
-        }
+    // }
 
-    }
+    // }
 
     private void printJumlahTidakLulus() {
 
@@ -174,7 +173,7 @@ public class View {
 
         if (NIM != null) {
 
-            showMessage(controller.printMatkulDiambilMahasiswa(NIM));
+            showMessage(controller.printMatkulDiambilMhs(NIM));
 
         }
 
@@ -186,7 +185,7 @@ public class View {
 
         if (NIK != null) {
 
-            showMessage(controller.printTotalJamMengajar(NIK));
+            showMessage(controller.printJamDosen(NIK));
 
         }
 
@@ -198,10 +197,10 @@ public class View {
 
         if (NIK != null) {
 
-            showMessage(controller.printGaji(NIK));
+            showMessage(controller.printGajiStaff(NIK));
 
         }
 
     }
-    
+
 }

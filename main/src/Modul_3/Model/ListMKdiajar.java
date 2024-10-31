@@ -7,8 +7,14 @@ public class ListMKdiajar extends ListMataKuliah {
     private ListMataKuliah listMK;
     private List<PresensiStaff> presensiStaff;
 
-    public ListMKdiajar(int kodeMK, int sks, String namaMK, ListMataKuliah listMK, List<PresensiStaff> presensiStaff) {
+    public ListMKdiajar(String kodeMK, int sks, String namaMK, ListMataKuliah listMK,
+            List<PresensiStaff> presensiStaff) {
         super(kodeMK, sks, namaMK);
+        this.listMK = listMK;
+        this.presensiStaff = presensiStaff;
+    }
+
+    public ListMKdiajar(ListMataKuliah listMK, List<PresensiStaff> presensiStaff) {
         this.listMK = listMK;
         this.presensiStaff = presensiStaff;
     }

@@ -1,25 +1,17 @@
 package Model;
 
 public class ListMataKuliah {
-    private int kodeMK;
+    private String kodeMK;
     private int sks;
     private String namaMK;
 
-    public ListMataKuliah(int kodeMK, int sks, String namaMK) {
+    public ListMataKuliah(String kodeMK, int sks, String namaMK) {
         this.kodeMK = kodeMK;
         this.sks = sks;
         this.namaMK = namaMK;
     }
 
     public ListMataKuliah() {
-    }
-
-    public int getKodeMK() {
-        return kodeMK;
-    }
-
-    public void setKodeMK(int kodeMK) {
-        this.kodeMK = kodeMK;
     }
 
     public int getSks() {
@@ -41,5 +33,13 @@ public class ListMataKuliah {
     @Override
     public String toString() {
         return "ListMataKuliah [kodeMK=" + kodeMK + ", sks=" + sks + ", namaMK=" + namaMK + "]";
+    }
+
+    public String getKodeMK() {
+        return kodeMK;
+    }
+
+    public void setKodeMK(String kodeMK) {
+        this.kodeMK = kodeMK;
     }
 }

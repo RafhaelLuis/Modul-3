@@ -17,11 +17,11 @@ public class Main {
                 listPresensi1.add(presensi2);
 
                 // Dummy MatkulAmbil Sarjana
-                ListMataKuliah matkulWajib1_srj = new ListMataKuliah(101, 3, "Desain Web");
-                ListMataKuliah matkulPil1 = new ListMataKuliahPilihan(501, 4, "AI", 10);
+                ListMataKuliah matkulWajib1_srj = new ListMataKuliah("101", 3, "Desain Web");
+                ListMataKuliah matkulPil1 = new ListMataKuliahPilihan("501", 4, "AI", 10);
 
                 ArrayList<ListMKdiambil> matkulSarjana = new ArrayList<>();
-                ListMKdiambil matkulAmbilSarjana1 = new ListMKdiambil(101, 3, "Algoritma", matkulWajib1_srj,
+                ListMKdiambil matkulAmbilSarjana1 = new ListMKdiambil("101", 3, "Algoritma", matkulWajib1_srj,
                                 listPresensi1, 90,
                                 99, 80);
 
@@ -37,9 +37,9 @@ public class Main {
 
                 // Dummy MatkulAmbil Magister
                 ArrayList<ListMKdiambil> matkulMagister = new ArrayList<>();
-                ListMataKuliah matkul1_magis = new ListMataKuliah(301, 4, "Basdat");
+                ListMataKuliah matkul1_magis = new ListMataKuliah("301", 4, "Basdat");
 
-                ListMKdiambil matkulAmbilMagister1 = new ListMKdiambil(301, 4, "Basdat", matkul1_magis, listPresensi1,
+                ListMKdiambil matkulAmbilMagister1 = new ListMKdiambil("301", 4, "Basdat", matkul1_magis, listPresensi1,
                                 100, 80,
                                 70);
 
@@ -78,12 +78,12 @@ public class Main {
                 ArrayList<ListMKdiajar> matkulDiajars1 = new ArrayList<>();
                 ArrayList<ListMKdiajar> matkulDiajars2 = new ArrayList<>();
 
-                ListMKdiajar matkulDiajar1 = new ListMKdiajar(301, 4, "Basdat", matkul1_magis, presensiStaffs);
-                ListMKdiajar matkulDiajar2 = new ListMKdiajar(501, 4, "AI", matkulPil1, presensiStaffs);
+                ListMKdiajar matkulDiajar1 = new ListMKdiajar("301", 4, "Basdat", matkul1_magis, presensiStaffs);
+                ListMKdiajar matkulDiajar2 = new ListMKdiajar("501", 4, "AI", matkulPil1, presensiStaffs);
                 matkulDiajars1.add(matkulDiajar1);
                 matkulDiajars1.add(matkulDiajar2);
 
-                ListMKdiajar matkulDiajar3 = new ListMKdiajar(101, 3, "Desain Wen", matkulWajib1_srj, presensiStaffs);
+                ListMKdiajar matkulDiajar3 = new ListMKdiajar("101", 3, "Desain Wen", matkulWajib1_srj, presensiStaffs);
                 matkulDiajars2.add(matkulDiajar3);
 
                 // Dummy Dosen

@@ -28,7 +28,7 @@ public class Controller {
         return "Data Tidak ditemukan";
     }
 
-    public double printNA(String NIM, int kodeMK) {
+    public String printNA(String NIM, String kodeMK) {
 
         double NA = 0;
 
@@ -43,10 +43,10 @@ public class Controller {
 
                         for (ListMKdiambil matkulDiambil : mhsSarjana.getMatkulDiambil()) {
 
-                            if (matkulDiambil.getKodeMK() == kodeMK) {
+                            if (matkulDiambil.getKodeMK().equals(kodeMK)) {
                                 NA = matkulDiambil.rataRata(matkulDiambil.getN1(), matkulDiambil.getN2(),
                                         matkulDiambil.getN3());
-                                return NA;
+                                return "Nilai Akhir" + NA;
                             }
 
                         }
@@ -56,10 +56,11 @@ public class Controller {
 
                         for (ListMKdiambil matkulDiambil : mhsMagister.getMatkulDiambil()) {
 
-                            if (matkulDiambil.getKodeMK() == kodeMK) {
+                            if (matkulDiambil.getKodeMK().equals(kodeMK)) {
                                 NA = matkulDiambil.rataRata(matkulDiambil.getN1(), matkulDiambil.getN2(),
                                         matkulDiambil.getN3());
-                                return NA;
+                                return "Nilai Akhir" + NA;
+
                             }
 
                         }
@@ -68,17 +69,17 @@ public class Controller {
 
                         NA = (mhsDoktor.getNilaiSidang1() + mhsDoktor.getNilaiSidang2() + mhsDoktor.getNilaiSidang3())
                                 / 3.0;
-                        return NA;
+                        return "Nilai Akhir" + NA;
 
                     }
                 }
-                return -1;
+                return "";
             }
         }
-        return -1;
+        return "Tidak ditemukan";
     }
 
-    public double rataRataNA(int kodeMK) {
+    public double rataRataNA(String kodeMK) {
 
         double totalNilai = 0;
         int jumlahMahasiswa = 0;
@@ -91,7 +92,7 @@ public class Controller {
 
                 for (ListMKdiambil matkulDiambil : mahasiswaSarjana.getMatkulDiambil()) {
 
-                    if (matkulDiambil.getKodeMK() == kodeMK) {
+                    if (matkulDiambil.getKodeMK().equals(kodeMK)) {
                         totalNilai += matkulDiambil.rataRata(matkulDiambil.getN1(), matkulDiambil.getN2(),
                                 matkulDiambil.getN3());
                         jumlahMahasiswa++;
@@ -104,7 +105,7 @@ public class Controller {
 
                 for (ListMKdiambil matkulDiambil : mahasiswaMagister.getMatkulDiambil()) {
 
-                    if (matkulDiambil.getKodeMK() == kodeMK) {
+                    if (matkulDiambil.getKodeMK().equals(kodeMK)) {
                         totalNilai += matkulDiambil.rataRata(matkulDiambil.getN1(), matkulDiambil.getN2(),
                                 matkulDiambil.getN3());
                         jumlahMahasiswa++;
@@ -130,7 +131,7 @@ public class Controller {
         }
     }
 
-    public String printJumlahTidakLulus(int kodeMK) {
+    public String printJumlahTidakLulus(String kodeMK) {
 
         int jumlahTidakLulus = 0;
         int jumlahMahasiswa = 0;
@@ -147,7 +148,7 @@ public class Controller {
 
                     for (ListMKdiambil matkulDiambil : mahasiswaSarjana.getMatkulDiambil()) {
 
-                        if (matkulDiambil.getKodeMK() == kodeMK) {
+                        if (matkulDiambil.getKodeMK().equals(kodeMK)) {
                             namaMK = matkulDiambil.getNamaMK();
                             NA = matkulDiambil.rataRata(matkulDiambil.getN1(), matkulDiambil.getN2(),
                                     matkulDiambil.getN3());
@@ -165,7 +166,7 @@ public class Controller {
 
                     for (ListMKdiambil matkulDiambil : mahasiswaMagister.getMatkulDiambil()) {
 
-                        if (matkulDiambil.getKodeMK() == kodeMK) {
+                        if (matkulDiambil.getKodeMK().equals(kodeMK)) {
                             namaMK = matkulDiambil.getNamaMK();
                             NA = matkulDiambil.rataRata(matkulDiambil.getN1(), matkulDiambil.getN2(),
                                     matkulDiambil.getN3());
