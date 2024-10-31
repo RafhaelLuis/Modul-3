@@ -3,9 +3,31 @@ package Main;
 import java.util.ArrayList;
 import java.util.List;
 
+import Controller.Controller;
 import Model.*;
+import View.View;
 
 public class Main {
+
+        private View View;
+        private Controller Controller;
+
+        public View getView() {
+                return View;
+        }
+
+        public void setView(View view) {
+                View = view;
+        }
+
+        public Controller getController() {
+                return Controller;
+        }
+
+        public void setController(Controller controller) {
+                Controller = controller;
+        }
+
         public static void main(String[] args) {
 
                 System.out.println("\033c");
@@ -102,25 +124,30 @@ public class Main {
                 users.add(dosenTetap1);
                 users.add(dosenHonorer1);
 
-                for (Mahasiswa mhsSarjana : mahasiswaSarjana) {
-                        String print = mhsSarjana.toString();
-                        System.out.println(print);
-                }
-                for (Mahasiswa mhsMagister : mahasiswaMagister) {
-                        String print = mhsMagister.toString();
-                        System.out.println(print);
-                }
-                for (Mahasiswa mhsDoktor : mahasiswaDoktor) {
-                        String print = mhsDoktor.toString();
-                        System.out.println(print);
-                }
-                for (Staff karyawann : karyawan) {
-                        String print = karyawann.toString();
-                        System.out.println(print);
-                }
-                for (Staff dosenn : dosens) {
-                        String print = dosenn.toString();
-                        System.out.println(print);
-                }
+                Controller controller = new Controller(users);
+                View view = new View(controller);
+                view.showMenu();
+
+                // for (Mahasiswa mhsSarjana : mahasiswaSarjana) {
+                // String print = mhsSarjana.toString();
+                // System.out.println(print);
+                // }
+                // for (Mahasiswa mhsMagister : mahasiswaMagister) {
+                // String print = mhsMagister.toString();
+                // System.out.println(print);
+                // }
+                // for (Mahasiswa mhsDoktor : mahasiswaDoktor) {
+                // String print = mhsDoktor.toString();
+                // System.out.println(print);
+                // }
+                // for (Staff karyawann : karyawan) {
+                // String print = karyawann.toString();
+                // System.out.println(print);
+                // }
+                // for (Staff dosenn : dosens) {
+                // String print = dosenn.toString();
+                // System.out.println(print);
+                // }
         }
+
 }

@@ -7,6 +7,10 @@ public class Controller {
 
     private List<User> users;
 
+    public Controller(List<User> users) {
+        this.users = users;
+    }
+
     public List<User> getUsers() {
         return users;
     }
@@ -79,7 +83,7 @@ public class Controller {
         return "Tidak ditemukan";
     }
 
-    public double rataRataNA(String kodeMK) {
+    public String printrataRataNA(String kodeMK) {
 
         double totalNilai = 0;
         int jumlahMahasiswa = 0;
@@ -124,10 +128,10 @@ public class Controller {
         }
 
         if (jumlahMahasiswa == 0) {
-            return 0;
+            return "Tidak ada mahasiswa";
 
         } else {
-            return totalNilai / jumlahMahasiswa;
+            return "Rata rata NA : " + totalNilai / jumlahMahasiswa;
         }
     }
 
